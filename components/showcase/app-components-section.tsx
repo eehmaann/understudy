@@ -28,7 +28,7 @@ export function AppComponentsSection() {
       title="Debut components"
       description="Purpose-built pieces for casting photos, working with the stage manager, timing scripts and taking the stage."
     >
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <DemoBlock title="PhotoUploadStage" className="lg:col-span-2">
           <PhotoUploadStage />
         </DemoBlock>

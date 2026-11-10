@@ -35,7 +35,7 @@ export function MotionSection() {
       title="Motion"
       description="Every movement has a theatrical cue. All animation collapses to an instant change under prefers-reduced-motion."
     >
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <DemoBlock title="Curtain reveal" note="animate-curtain-left / right">
           <div className="relative aspect-video overflow-hidden rounded-md bg-muted">
             <Image src="/photos/kyoto.png" alt="A quiet Kyoto street at dusk" fill sizes="480px" className="object-cover" />

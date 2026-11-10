@@ -44,7 +44,7 @@ export function DemoBlock({
   className?: string
 }) {
   return (
-    <div className={cn('flex flex-col gap-4 rounded-lg bg-card p-5 ring-1 ring-border', className)}>
+    <div className={cn('flex min-w-0 flex-col gap-4 rounded-lg bg-card p-5 ring-1 ring-border', className)}>
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <h3 className="font-serif text-title">{title}</h3>
         {note && <span className="font-playbill text-muted-foreground">{note}</span>}

@@ -45,7 +45,7 @@ export function TokensSection() {
       title="Space, shape, light"
       description="A 4px spacing grid, subtle radii with pill-shaped marquee chips, and warm glows in place of grey drop shadows."
     >
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <DemoBlock title="Spacing" note="4px base · --spacing">
           <ul className="flex flex-col gap-2">
             {spacing.map((s) => (

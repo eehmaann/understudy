@@ -288,9 +288,9 @@ function OverlaysDemo() {
   )
 }
 
-function CardTabsDemo() {
+function CardTabsDemo({ className }: { className?: string }) {
   return (
-    <DemoBlock title="Card · Tabs · Separator">
+    <DemoBlock title="Card · Tabs · Separator" className={className}>
       <Tabs defaultValue="script">
         <TabsList>
           <TabsTrigger value="script">Script</TabsTrigger>
@@ -342,7 +342,7 @@ export function CoreComponentsSection() {
       title="Core components"
       description="Themed shadcn/ui primitives. Gold focus rings everywhere; tab through the page to see them."
     >
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <ButtonsDemo />
         <FormsDemo />
         <ControlsDemo />

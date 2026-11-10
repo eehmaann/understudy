@@ -68,7 +68,7 @@ export function ColorSection() {
       title="Color"
       description="HSL tokens mapped to shadcn roles. Every text/background pair meets WCAG AA. Gold has a dedicated text-safe token so brass stays legible on ivory paper."
     >
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <Palette mode="stage" />
         <Palette mode="matinee" />
       </div>

@@ -56,7 +56,7 @@ export function CriticNotes({
   return (
     <Card className={cn('relative', className)}>
       <DecoCorners />
-      <CardHeader className="items-center gap-2 px-8 pt-3 text-center">
+      <CardHeader className="justify-items-center gap-2 px-8 pt-3 text-center">
         <Eyebrow>Opening Night Review</Eyebrow>
         <StarRating rating={rating} />
         <blockquote className="font-serif text-title italic text-balance">{`“${pullQuote}”`}</blockquote>

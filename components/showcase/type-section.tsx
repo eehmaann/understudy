@@ -24,7 +24,7 @@ export function TypeSection() {
       title="Typography"
       description="Bodoni Moda — a high-contrast didone — for titles, marquees and slide numbers. DM Sans for everything you read and click. Letterspaced caps for playbill labels."
     >
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div className="flex flex-col gap-2 rounded-lg bg-card p-6 ring-1 ring-border">
           <span className="font-playbill text-gold">Display · font-serif</span>
           <span className="font-serif text-display-lg italic">Bodoni Moda</span>
