@@ -1,4 +1,5 @@
 import { AppComponentsSection } from '@/components/showcase/app-components-section'
+import { getDesignSystemFiles } from '@/lib/load-design-system'
 import { ColorSection } from '@/components/showcase/color-section'
 import { CoreComponentsSection } from '@/components/showcase/core-components-section'
 import { Hero } from '@/components/showcase/hero'
@@ -9,10 +10,12 @@ import { TypeSection } from '@/components/showcase/type-section'
 import { WorkspaceMock } from '@/components/showcase/workspace-mock'
 
 export default function Page() {
+  const files = getDesignSystemFiles()
+
   return (
     <>
       {/* v0 Design System Showcase Page */}
-      <ShowcaseNav />
+      <ShowcaseNav files={files} />
       <Hero />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <ColorSection />

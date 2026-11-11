@@ -2,7 +2,9 @@
 
 import { MoonIcon, SunIcon } from 'lucide-react'
 import { useTheme } from 'next-themes'
+import { ExportDialog } from '@/components/showcase/export-dialog'
 import { Button } from '@/components/ui/button'
+import type { DesignSystemFile } from '@/lib/design-system'
 
 const links = [
   { href: '#color', label: 'Color' },
@@ -14,7 +16,7 @@ const links = [
   { href: '#workspace', label: 'Workspace' },
 ]
 
-export function ShowcaseNav() {
+export function ShowcaseNav({ files }: { files: DesignSystemFile[] }) {
   const { resolvedTheme, setTheme } = useTheme()
 
   return (
@@ -36,17 +38,20 @@ export function ShowcaseNav() {
             </li>
           ))}
         </ul>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-          aria-label="Toggle between stage (dark) and matinee (light) mode"
-        >
-          <SunIcon data-icon="inline-start" className="hidden dark:block" />
-          <MoonIcon data-icon="inline-start" className="dark:hidden" />
-          <span className="hidden dark:inline">Matinee</span>
-          <span className="dark:hidden">Stage</span>
-        </Button>
+        <div className="flex items-center gap-2">
+          <ExportDialog files={files} />
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+            aria-label="Toggle between stage (dark) and matinee (light) mode"
+          >
+            <SunIcon data-icon="inline-start" className="hidden dark:block" />
+            <MoonIcon data-icon="inline-start" className="dark:hidden" />
+            <span className="hidden dark:inline">Matinee</span>
+            <span className="dark:hidden">Stage</span>
+          </Button>
+        </div>
       </nav>
     </header>
   )
